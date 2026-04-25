@@ -1,0 +1,871 @@
+[
+  {
+    "name": "Nike Air Max 270",
+    "brand": "Nike",
+    "description": "Comfortable lifestyle running shoes",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 4999,
+    "variants": [
+      {
+        "color": "Red",
+        "colorCode": "#FF0000",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/trm9jrvijzuqzmkyah2t/AIR+MAX+270.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/gorfwjchoasrrzr1fggt/AIR+MAX+270.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Nike Pegasus 41",
+    "brand": "Nike",
+    "description": "Responsive road running shoes",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 5799,
+    "variants": [
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b345be32-d56c-4db5-9f8b-cb6ba7a2bdf6/W+AIR+ZOOM+PEGASUS+41+ESS.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/34c4b85a-ae5b-42b4-9201-57623bfeb685/W+AIR+ZOOM+PEGASUS+41.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Nike Quest 6",
+    "brand": "Nike",
+    "description": "Daily training shoes with soft cushioning",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 4699,
+    "variants": [
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/63ac63f2-20d7-44bc-aebe-5fdaedd48e6c/NIKE+QUEST+6.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/378820bf-d936-411c-950b-b80e1033c454/NIKE+QUEST+6.png"],
+        "sizes": [8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Nike Downshifter 14",
+    "brand": "Nike",
+    "description": "Lightweight shoes for running and walking",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 3899,
+    "variants": [
+      {
+        "color": "Green",
+        "colorCode": "#008000",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f223d7e5-6329-4c9b-9a8d-f1a1c6c15bf3/NIKE+REVOLUTION+8.png"],
+        "sizes": [6, 7, 8, 9]
+      },
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/2fc76587-5829-4bfe-9121-4d31c54c4ea1/NIKE+DOWNSHIFTER+14+WIDE.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Nike Revolution 8",
+    "brand": "Nike",
+    "description": "Affordable running shoes for everyday comfort",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 3599,
+    "variants": [
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/53a10cae-4b8c-406e-bfeb-ba83e2b8a5ec/NIKE+REVOLUTION+8.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/04f9808a-37a5-42aa-a90f-f6330ee6d5e2/NIKE+REVOLUTION+8.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Adidas Ultraboost Light",
+    "brand": "Adidas",
+    "description": "Premium cushioned running shoes",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 6999,
+    "variants": [
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/4ff790231b7f461baee3c291e96b74af_9366/ULTRABOOST_1.0_SHOES_Black_HQ4199_HM1.jpg"],
+        "sizes": [7, 8, 9, 10]
+      },
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f0ca2dd8bdb84a2ab11faacb8802c4dc_9366/ULTRABOOST_1.0_SHOES_White_HQ4202_HM1.jpg"],
+        "sizes": [6, 7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Adidas Duramo SL",
+    "brand": "Adidas",
+    "description": "Versatile running shoes for daily wear",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 4299,
+    "variants": [
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1e394c5baba240db8aa2db4df189b99e_9366/Duramo_SL_Shoes_Blue_IF9478_01_standard.jpg"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["assets/shoes/adidas-duramo-sl-grey-1.pnghttps://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/e30f2ff301f8423490c1352791620b41_9366/Duramo_SL_Shoes_Grey_IF1200_01_standard.jpg"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Adidas Adizero SL",
+    "brand": "Adidas",
+    "description": "Fast lightweight shoes for road running",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 5599,
+    "variants": [
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/22b92f1143c34c748c889eaa1c1f475f_9366/Adizero_EVO_SL_AMG_Shoes_Grey_KI7297_HM1.jpg"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Adidas Supernova Rise",
+    "brand": "Adidas",
+    "description": "Soft and stable running shoes",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 6199,
+    "variants": [
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/9eb8399e544241078f6d2d20e06cd71f_9366/SUPERNOVA_RISE_3_RUNNING_SHOES_White_JP8680_HM1.jpg"],
+        "sizes": [6, 7, 8, 9, 10, 11]
+      },
+      {
+        "color": "Green",
+        "colorCode": "#008000",
+        "images": ["https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/29fca42a63df47e89d8f9e8f3a63b921_9366/SUPERNOVA_RISE_3_RUNNING_SHOES_Blue_JP8684_01_00_standard.jpg"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Adidas Runfalcon 5",
+    "brand": "Adidas",
+    "description": "Entry-level running shoes with good grip",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": false,
+    "basePrice": 3499,
+    "variants": [
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/adidas-runfalcon-5-black-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Red",
+        "colorCode": "#FF0000",
+        "images": ["assets/shoes/adidas-runfalcon-5-red-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Reebok Floatride Energy",
+    "brand": "Reebok",
+    "description": "Performance running shoes with responsive feel",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 4899,
+    "variants": [
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["assets/shoes/reebok-floatride-energy-blue-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/reebok-floatride-energy-black-1.png"],
+        "sizes": [8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Reebok Nano X",
+    "brand": "Reebok",
+    "description": "Training shoes built for gym and cardio sessions",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 5399,
+    "variants": [
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["assets/shoes/reebok-nano-x-grey-1.png"],
+        "sizes": [7, 8, 9, 10]
+      },
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/reebok-nano-x-white-1.png"],
+        "sizes": [6, 7, 8, 9]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Reebok Zig Dynamica",
+    "brand": "Reebok",
+    "description": "Stylish sports shoes with cushioned sole",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 4299,
+    "variants": [
+      {
+        "color": "Red",
+        "colorCode": "#FF0000",
+        "images": ["assets/shoes/reebok-zig-dynamica-red-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/reebok-zig-dynamica-black-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Reebok Club C",
+    "brand": "Reebok",
+    "description": "Classic sneakers for casual everyday outfits",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 3999,
+    "variants": [
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/reebok-club-c-white-1.png"],
+        "sizes": [6, 7, 8, 9, 10, 11]
+      },
+      {
+        "color": "Green",
+        "colorCode": "#008000",
+        "images": ["assets/shoes/reebok-club-c-green-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Reebok DMX Comfort",
+    "brand": "Reebok",
+    "description": "Comfort-focused sneakers with sporty look",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": false,
+    "basePrice": 3699,
+    "variants": [
+      {
+        "color": "Navy",
+        "colorCode": "#000080",
+        "images": ["assets/shoes/reebok-dmx-comfort-navy-1.png"],
+        "sizes": [6, 7, 8, 9]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/reebok-dmx-comfort-black-1.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Puma RS-X",
+    "brand": "Puma",
+    "description": "Chunky sneakers with modern street style",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 5199,
+    "variants": [
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["assets/shoes/puma-rs-x-blue-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/puma-rs-x-white-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Puma Velocity Nitro",
+    "brand": "Puma",
+    "description": "Responsive running shoes for long-distance comfort",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 6099,
+    "variants": [
+      {
+        "color": "Orange",
+        "colorCode": "#FFA500",
+        "images": ["assets/shoes/puma-velocity-nitro-orange-1.png"],
+        "sizes": [7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/puma-velocity-nitro-black-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Puma Deviate Nitro",
+    "brand": "Puma",
+    "description": "Fast training shoes with race-inspired design",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 6599,
+    "variants": [
+      {
+        "color": "Yellow",
+        "colorCode": "#FFFF00",
+        "images": ["assets/shoes/puma-deviate-nitro-yellow-1.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      },
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["assets/shoes/puma-deviate-nitro-grey-1.png"],
+        "sizes": [6, 7, 8, 9]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Puma Flyer Runner",
+    "brand": "Puma",
+    "description": "Lightweight running shoes for daily wear",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": false,
+    "basePrice": 3399,
+    "variants": [
+      {
+        "color": "Red",
+        "colorCode": "#FF0000",
+        "images": ["assets/shoes/puma-flyer-runner-red-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/puma-flyer-runner-black-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Puma Softride Enzo",
+    "brand": "Puma",
+    "description": "Soft cushioned shoes with bold sporty styling",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 4599,
+    "variants": [
+      {
+        "color": "Green",
+        "colorCode": "#008000",
+        "images": ["assets/shoes/puma-softride-enzo-green-1.png"],
+        "sizes": [6, 7, 8, 9]
+      },
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/puma-softride-enzo-white-1.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Campus OXYFIT",
+    "brand": "Campus",
+    "description": "Comfortable sports shoes for everyday use",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 1999,
+    "variants": [
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["assets/shoes/campus-oxyfit-blue-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/campus-oxyfit-black-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Campus BRAIL PRO",
+    "brand": "Campus",
+    "description": "Men's running shoes with lightweight feel",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 1899,
+    "variants": [
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["assets/shoes/campus-brail-pro-grey-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Navy",
+        "colorCode": "#000080",
+        "images": ["assets/shoes/campus-brail-pro-navy-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Campus REVOLT",
+    "brand": "Campus",
+    "description": "Casual sneakers with modern clean look",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 1799,
+    "variants": [
+      {
+        "color": "Off White",
+        "colorCode": "#F8F8F0",
+        "images": ["assets/shoes/campus-revolt-offwhite-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/campus-revolt-black-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Campus FYBER",
+    "brand": "Campus",
+    "description": "Durable sports shoes with daily comfort",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 1699,
+    "variants": [
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/campus-fyber-black-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Red",
+        "colorCode": "#FF0000",
+        "images": ["assets/shoes/campus-fyber-red-1.png"],
+        "sizes": [7, 8, 9]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "Campus HURRICANE",
+    "brand": "Campus",
+    "description": "Budget-friendly running shoes for active days",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": false,
+    "basePrice": 1599,
+    "variants": [
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/campus-hurricane-white-1.png"],
+        "sizes": [6, 7, 8, 9]
+      },
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["assets/shoes/campus-hurricane-blue-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "ASICS NOVABLAST 5",
+    "brand": "ASICS",
+    "description": "Energetic running shoes with soft bounce",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 7499,
+    "variants": [
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["assets/shoes/asics-novablast-5-blue-1.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      },
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/asics-novablast-5-white-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "ASICS GEL-KAYANO 32",
+    "brand": "ASICS",
+    "description": "Premium stability running shoes",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 8299,
+    "variants": [
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/asics-gel-kayano-32-black-1.png"],
+        "sizes": [7, 8, 9, 10]
+      },
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["assets/shoes/asics-gel-kayano-32-grey-1.png"],
+        "sizes": [8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "ASICS GEL-NIMBUS 28",
+    "brand": "ASICS",
+    "description": "Soft max-cushion shoes for long runs",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 7999,
+    "variants": [
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/asics-gel-nimbus-28-white-1.png"],
+        "sizes": [7, 8, 9, 10]
+      },
+      {
+        "color": "Green",
+        "colorCode": "#008000",
+        "images": ["assets/shoes/asics-gel-nimbus-28-green-1.png"],
+        "sizes": [6, 7, 8, 9]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "ASICS GEL-CONTEND",
+    "brand": "ASICS",
+    "description": "Reliable training shoes with everyday support",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 4299,
+    "variants": [
+      {
+        "color": "Navy",
+        "colorCode": "#000080",
+        "images": ["assets/shoes/asics-gel-contend-navy-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/asics-gel-contend-black-1.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "ASICS TRABUCO 14",
+    "brand": "ASICS",
+    "description": "Trail running shoes with strong grip",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 6899,
+    "variants": [
+      {
+        "color": "Orange",
+        "colorCode": "#FFA500",
+        "images": ["assets/shoes/asics-trabuco-14-orange-1.png"],
+        "sizes": [7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/asics-trabuco-14-black-1.png"],
+        "sizes": [8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "New Balance 574",
+    "brand": "New Balance",
+    "description": "Classic sneakers with everyday comfort",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 5999,
+    "variants": [
+      {
+        "color": "Grey",
+        "colorCode": "#808080",
+        "images": ["assets/shoes/new-balance-574-grey-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "Navy",
+        "colorCode": "#000080",
+        "images": ["assets/shoes/new-balance-574-navy-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "New Balance 550",
+    "brand": "New Balance",
+    "description": "Basketball-inspired sneakers with retro styling",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": true,
+    "basePrice": 6499,
+    "variants": [
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/new-balance-550-white-1.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      },
+      {
+        "color": "Green",
+        "colorCode": "#008000",
+        "images": ["assets/shoes/new-balance-550-green-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "New Balance 9060",
+    "brand": "New Balance",
+    "description": "Chunky lifestyle sneakers with premium comfort",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 7299,
+    "variants": [
+      {
+        "color": "Cream",
+        "colorCode": "#FFFDD0",
+        "images": ["assets/shoes/new-balance-9060-cream-1.png"],
+        "sizes": [7, 8, 9, 10]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/new-balance-9060-black-1.png"],
+        "sizes": [8, 9, 10, 11]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "New Balance 530",
+    "brand": "New Balance",
+    "description": "Retro running sneakers for casual and sporty wear",
+    "category": "Men",
+    "isBestSeller": true,
+    "isNewArrival": false,
+    "basePrice": 5699,
+    "variants": [
+      {
+        "color": "Silver",
+        "colorCode": "#C0C0C0",
+        "images": ["assets/shoes/new-balance-530-silver-1.png"],
+        "sizes": [6, 7, 8, 9, 10]
+      },
+      {
+        "color": "White",
+        "colorCode": "#FFFFFF",
+        "images": ["assets/shoes/new-balance-530-white-1.png"],
+        "sizes": [7, 8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  },
+  {
+    "name": "New Balance 1080 v15",
+    "brand": "New Balance",
+    "description": "High-cushion running shoes for smooth daily runs",
+    "category": "Men",
+    "isBestSeller": false,
+    "isNewArrival": true,
+    "basePrice": 7899,
+    "variants": [
+      {
+        "color": "Blue",
+        "colorCode": "#0000FF",
+        "images": ["assets/shoes/new-balance-1080-v15-blue-1.png"],
+        "sizes": [7, 8, 9, 10, 11]
+      },
+      {
+        "color": "Black",
+        "colorCode": "#000000",
+        "images": ["assets/shoes/new-balance-1080-v15-black-1.png"],
+        "sizes": [8, 9, 10]
+      }
+    ],
+    "createdAt": "2026-03-25T00:00:00Z",
+    "updatedAt": "2026-03-25T00:00:00Z"
+  }
+]
