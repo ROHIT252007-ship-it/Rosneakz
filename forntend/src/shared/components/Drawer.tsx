@@ -4,6 +4,7 @@ import {
   Text,
   Image,
   StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 import {
   DrawerContentScrollView,
@@ -93,7 +94,7 @@ const Drawer = (props: any) => {
     >
 
 
-      <View style={styles.profileContainer}>
+      <TouchableOpacity  onPress={() => props.navigation.navigate('Profile')} style={styles.profileContainer}>
         <Image
           accessible={true}
           accessibilityRole="image"
@@ -102,9 +103,9 @@ const Drawer = (props: any) => {
           style={styles.image}
           onError={() => setImage(null)}
         />
-        <Text style={styles.email}>Hey,</Text>
+        <Text style={[styles.email,{color:'#707B81'}]}>Hey,</Text>
         <Text style={styles.name}>{name}</Text>
-      </View>
+      </TouchableOpacity>
 
 
       <DrawerItem

@@ -28,6 +28,8 @@ import { getCartFromStorage } from '../../cart/services/cartStorage';
 import { useToast } from '../../../shared/components/ToastProvider';
 import ProductDetailSkeleton from '../components/DetailsSkeleton';
 import { RootState } from '../../../app/store/store';
+import Shoe360View from '../components/Image360';
+import Shoe3DViewer from '../components/ThreeDmodalview';
 type Props = {
   route: RouteProp<RootStackParamList, 'Details'>;
 };
@@ -157,17 +159,22 @@ const loading = useSelector(
               {theme.theme === 'light' ? <Frame /> : <Bagwhite />}
             </ButtonComponent>
           </View>
-
-          <View style={styles.imageContainer}>
-            <Image
-              accessible={true}
-              accessibilityRole="image"
-              accessibilityLabel={`${mainProduct.name} product image`}
-              source={getShoeImage(selectedImage)}
-              style={{ width: wp(90), height: hp(30) }}
-              resizeMode="contain"
-            />
-          </View>
+          {mainProduct._id == 'nike-air-max-alpha-black' ? (
+            <Shoe3DViewer modelUrl="http://192.168.1.7:2507/models/mashroom_house.glb" />
+          ) : mainProduct._id == 'nike-air-max-alpha-light-blue' ? (
+            <Shoe360View />
+          ) : (
+            <View style={styles.imageContainer}>
+              <Image
+                accessible={true}
+                accessibilityRole="image"
+                accessibilityLabel={`${mainProduct.name} product image`}
+                source={getShoeImage(selectedImage)}
+                style={{ width: wp(90), height: hp(30) }}
+                resizeMode="contain"
+              />
+            </View>
+          )}
 
           <ScrollView
             showsVerticalScrollIndicator={false}
@@ -345,7 +352,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     contentCard: {
       backgroundColor: theme.white,
       borderRadius: 20,
-      top: 25,
+     
     },
     best: {
       fontSize: 14,

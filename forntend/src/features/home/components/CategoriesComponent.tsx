@@ -26,38 +26,38 @@ const CategoriesComponent = ({ item, selectedBrand, onSelectBrand }: Props) => {
 
   const isSelected = selectedBrand === item.name;
 
-if (!loaded) {
-return  <CategoriesSkeleton />;
-}else{
-   return (
-    
-    <View style={styles.wrapper}>
-      <TouchableOpacity
-             accessible={true}
-           accessibilityRole="button"
-  accessibilityLabel="brand category"
-  accessibilityHint="Filters by selected brand"
-        style={isSelected ? styles.card1 : styles.card2}
-        onPress={() => onSelectBrand(item.name)}
-        activeOpacity={0.9}
-      >
-        <View style={styles.imageBox}>
-          <Image
-            accessible={false}
-            source={item.image}
-            style={styles.image}
-            resizeMode="contain"
-          />
-        </View>
+  if (!loaded) {
+    return <CategoriesSkeleton />;
+  } else {
+    return (
 
-        {isSelected ? <Text style={styles.text}>{item.name}</Text> : null}
-      </TouchableOpacity>
+      <View style={styles.wrapper}>
+        <TouchableOpacity
+          accessible={true}
+          accessibilityRole="button"
+          accessibilityLabel="brand category"
+          accessibilityHint="Filters by selected brand"
+          style={isSelected ? styles.card1 : styles.card2}
+          onPress={() => onSelectBrand(item.name)}
+          activeOpacity={0.9}
+        >
+          <View style={styles.imageBox}>
+            <Image
+              accessible={false}
+              source={item.image}
+              style={styles.image}
+              resizeMode="contain"
+            />
+          </View>
 
-      
+          {isSelected ? <Text style={styles.text}>{item.name}</Text> : null}
+        </TouchableOpacity>
+
+
       </View>
-   );
-    } 
-  
+    );
+  }
+
 };
 
 export default CategoriesComponent;
@@ -79,12 +79,12 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     card1: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 5,
-      marginVertical: 5,
-      marginHorizontal:7,
+      gap: 9,
+      margin: 5,
       borderRadius: 45,
       backgroundColor: '#5B9EE1',
       padding: 5,
+
     },
 
     card2: {
@@ -92,21 +92,21 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
       alignItems: 'center',
       gap: 5,
       marginVertical: 5,
-      marginHorizontal:7,
+      marginHorizontal: 7,
       borderRadius: 45,
       backgroundColor: theme.white,
       padding: 5,
     },
 
     imageBox: {
-      padding: 7,
+      padding: 3,
       backgroundColor: theme.white,
       borderRadius: 25,
     },
 
     image: {
-      width: 20,
-      height: 20,
+      width: 30,
+      height: 30,
     },
 
     text: {
@@ -114,5 +114,6 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
       fontFamily: font.airmedium,
       color: '#FFFFFF',
       margin: 2,
+      right:3,
     },
   });

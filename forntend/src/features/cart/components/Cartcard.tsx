@@ -135,7 +135,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     },
 
     imageBox: {
-      backgroundColor: theme.mode === 'dark' ? theme.background : '#fff',
+      backgroundColor: theme.mode === 'dark' ? theme.white : '#fff',
       borderRadius: 15,
       marginRight: 12,
       padding: 6,
@@ -177,10 +177,10 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
 
     subBtn: {
       backgroundColor: theme.mode === 'dark' ? theme.background : '#fff',
-      padding: 7,
-      minHeight: 44,
-      minWidth: 44,
-      borderRadius: 14,
+      padding: 9,
+      maxHeight: 44,
+      maxWidth: 44,
+      borderRadius: 18,
       justifyContent: 'center',
       alignItems: 'center',
     },

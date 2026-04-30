@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
       marginTop:7,
         fontFamily: font.airblack,
         fontSize: 16,
-        color: "#9d9d9d"
+        color: "#9d9d9d",
+        lineHeight: 24,
     },
 })

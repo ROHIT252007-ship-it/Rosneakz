@@ -76,10 +76,6 @@ const Card = ({ data }: Props) => {
         {item.name}
       </Text>
 
-      <Text style={styles.brandtext} numberOfLines={1}>
-        {item.brand}
-      </Text>
-
       <View style={styles.bottom}>
         <Text style={styles.pricetext}>₹{item.basePrice}</Text>
 
@@ -184,10 +180,8 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
 
     add: {
       backgroundColor: '#5B9EE1',
-      maxHeight: 38,
-      maxWidth: 34,
-      minHeight: 44,
-      minWidth: 44,
+      height: 44,
+      width: 38,
       borderBottomRightRadius: 20,
       borderTopLeftRadius: 20,
       justifyContent: 'center',

@@ -57,11 +57,6 @@ const Baner = ({ data }: Props) => {
           <Text style={styles.nametext} numberOfLines={2}>
             {item.name}
           </Text>
-
-          <Text style={styles.brandtext} numberOfLines={1}>
-            {item.brand}
-          </Text>
-
           <Text style={styles.pricetext}>₹{item.basePrice}</Text>
         </View>
       </TouchableOpacity>

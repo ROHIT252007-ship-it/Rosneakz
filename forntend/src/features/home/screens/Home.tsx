@@ -1,11 +1,4 @@
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  TextInput,
-} from 'react-native';
+import {ScrollView,StyleSheet,Text,TouchableOpacity,View,TextInput,} from 'react-native';
 import React, { useEffect, useMemo, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import ButtonComponent from '../../../shared/components/ButtonComponent';
@@ -26,26 +19,26 @@ import { NavigationTypeHome } from '../types/Hometype';
 import { RootDarwerParamList } from '../../../shared/types/drawerNavigation.type';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { useAppTheme } from '../../../shared/hooks/theme';
-import { getProducts } from '../services/home.services';
+import { getLoaction, getProducts } from '../services/home.services';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../app/store/store';
-import {
-  setProductError,
-  setProductLoading,
-  setProducts,
-} from '../../product/redux/productSlice';
-// import { CartItem } from '../../cart/redux/cartSlice';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {setProductError,setProductLoading,setProducts,} from '../../product/redux/productSlice';
 import CardSkeleton from '../components/CardSkeleton';
 import BanerSkeleton from '../components/BanerSkeleton';
 import { showError } from '../../../shared/utils/showError';
-import { getCartFromStorage } from '../../cart/services/cartStorage';
+import SelectShopModal, { LocationType } from '../components/LocationModal';
+
+
 
 const Home = () => {
+
+
+
   const [search, setSearch] = useState<string>('');
   const { wp, hp } = useResponsive();
   const navigation = useNavigation<NavigationTypeHome>();
-  const drawerNavigation =
-    useNavigation<DrawerNavigationProp<RootDarwerParamList>>();
+  const drawerNavigation = useNavigation<DrawerNavigationProp<RootDarwerParamList>>();
   const theme = useAppTheme();
   const dispatch = useDispatch();
   const styles = useMemo(() => createStyles(theme), [theme]);
@@ -56,15 +49,17 @@ const Home = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const isCartNotEmpty = cartItems.length > 0;
   const safeProducts = Array.isArray(products) ? products : [];
-
   const filteredProducts = safeProducts.filter(
     item => item.brand === selectedBrand,
   );
-
   const popularProducts = filteredProducts.filter(item => item.isBestSeller);
   const newArrivalProducts = filteredProducts.filter(item => item.isNewArrival);
   const isLoading = loading;
-
+  const [shopModalVisible, setShopModalVisible] = useState(false);
+  const [locations, setLocations] = useState<LocationType[]>([]);
+  const [selectedShop, setSelectedShop] = useState<LocationType | null>(null);
+  const SELECTED_SHOP_KEY = 'SELECTED_SHOP';
+  
   const storeProducts = async () => {
     try {
       dispatch(setProductLoading(true));
@@ -74,11 +69,37 @@ const Home = () => {
       dispatch(setProductError('Failed to fetch products'));
     }
   };
+  const storelocations = async () => {
+    try {
+      setShopModalVisible(true);
+      const locationData = await getLoaction();
+      setLocations(locationData);
+    } catch (err) {
+      showError('Failed to fetch locations:', err instanceof Error ? err.message : 'Unknown error');
+    }
+  };
+  const loadSelectedShop = async () => {
+    try {
+      const savedShop = await AsyncStorage.getItem(SELECTED_SHOP_KEY);
+
+      if (savedShop) {
+        setSelectedShop(JSON.parse(savedShop));
+      }
+    } catch (error) {
+      showError(
+        'Failed to load selected shop:',
+        error instanceof Error ? error.message : 'Unknown error',
+      );
+    }
+  };
 
 
   useEffect(() => {
-    if (fetched) return;
-    storeProducts();
+    if (!fetched) {
+      storeProducts();
+    }
+
+    loadSelectedShop();
   }, [fetched]);
 
 
@@ -92,6 +113,7 @@ const Home = () => {
       showError('Error handling search submit:', error instanceof Error ? error.message : 'Unknown error');
     }
   };
+
 
   if (error) {
     return (
@@ -117,18 +139,28 @@ const Home = () => {
             {theme.theme === 'light' ? <Menu /> : <Menuwhite />}
           </ButtonComponent>
 
-          <View>
+          <TouchableOpacity
+            accessible={true}
+            accessibilityRole="button"
+            accessibilityLabel="Select store location"
+            accessibilityHint="Opens a modal to select your store location"
+            onPress={() => storelocations()}
+          >
             <Text style={[styles.title, { fontSize: wp(3.5) }]}>
-              Store location
+              {selectedShop
+                ? `${selectedShop.shop_name}`
+                : 'Rosneakz Store'}
             </Text>
 
             <View style={styles.location}>
               <Location />
               <Text style={[styles.locationtext, { fontSize: wp(3.8) }]}>
-                Dindoli, Surat
+                {selectedShop
+                  ? `${selectedShop.shop_area}, ${selectedShop.city}`
+                  : 'Dindoli, Surat'}
               </Text>
             </View>
-          </View>
+          </TouchableOpacity>
 
           <ButtonComponent
             accessibilityLabel="Open cart"
@@ -189,7 +221,7 @@ const Home = () => {
           </View>
 
           {isLoading ? <CardSkeleton /> : <Card data={popularProducts} />}
-         
+
           <View style={[styles.sectiontext, { marginVertical: hp(2) }]}>
             <Text style={[styles.heading, { fontSize: wp(4) }]}>
               New Arrivals
@@ -213,6 +245,16 @@ const Home = () => {
           {isLoading ? <BanerSkeleton /> : <Baner data={newArrivalProducts} />}
         </ScrollView>
       </View>
+      <SelectShopModal
+        visible={shopModalVisible}
+        locations={locations}
+        selectedLocationId={selectedShop?._id}
+        onClose={() => setShopModalVisible(false)}
+        onSelect={async (shop) => {
+          setSelectedShop(shop);
+          await AsyncStorage.setItem(SELECTED_SHOP_KEY, JSON.stringify(shop));
+        }}
+      />
       <Buttombar />
     </SafeAreaView>
   );

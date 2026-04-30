@@ -114,9 +114,7 @@ const Wishlist = () => {
           {item.name}
         </Text>
 
-        <Text style={[styles.subtitle, { fontSize: wp(3.2) }]}>
-          {item.brand}
-        </Text>
+     
 
         <View style={styles.row}>
           <Text style={[styles.price, { fontSize: wp(3.8) }]}>
@@ -229,6 +227,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
+      marginTop: 10,
     },
 
     card: {
@@ -249,7 +248,9 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     },
 
     image: {
-      width: '100%',
+      marginVertical: 10,
+      width: 155,
+      height: 120,
     },
 
     best: {
@@ -282,9 +283,11 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     },
 
     colorDot: {
-      width: 14,
-      height: 14,
-      borderRadius: 7,
+           width: 21,
+      height: 21,
+      borderRadius: 11,
+      borderColor: theme.mode === 'dark' ? '#223a53' : '#e6e8e9',
+      borderWidth: 3,
     },
 
     emptyContainer: {

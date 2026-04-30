@@ -2,8 +2,14 @@ import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import ShimmerPlaceholder from 'react-native-shimmer-placeholder';
 import LinearGradient from 'react-native-linear-gradient';
+import { useAppTheme } from '../../../shared/hooks/theme';
 
 const CategoriesSkeleton = () => {
+    const theme = useAppTheme();
+   const shimmerColors =
+    theme.theme === 'dark'
+      ? ['#2A2F36', '#3A4048', '#2A2F36']
+      : ['#E5E7EB', '#F3F4F6', '#E5E7EB'];
   return (
     <View style={styles.container}>      
        
@@ -12,7 +18,7 @@ const CategoriesSkeleton = () => {
             <ShimmerPlaceholder
               LinearGradient={LinearGradient}
               style={styles.image}
-               shimmerColors={['#E5E7EB', '#F3F4F6', '#E5E7EB']}
+               shimmerColors={shimmerColors}
             />
 
           

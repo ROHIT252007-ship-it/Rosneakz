@@ -166,12 +166,12 @@ const handleVerifyOtp = async () => {
     step === 1
       ? 'Recovery Password'
       : step === 2
-      ? 'Verify OTP'
+      ? 'Verify'
       : 'Reset Password'
   }
   subtitle={
     step === 1
-      ? 'Please Enter Your Email Address To Receive a Verification Code'
+      ? 'Please Enter Your Email Address To \n Receive a Verification Code'
       : step === 2
       ? 'Enter the 6 digit OTP sent to your email'
       : 'Please enter your new password'

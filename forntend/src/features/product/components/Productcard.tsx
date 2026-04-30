@@ -129,10 +129,6 @@ const Productcard = ({ data }: Props) => {
           {item.name}
         </Text>
 
-        <Text style={styles.brandtext} numberOfLines={1}>
-          {item.brand}
-        </Text>
-
         <View style={styles.colorRow}>
           {item.relatedVariants?.slice(0, 3).map((variant, i) => (
             <View
@@ -209,6 +205,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     },
 
     image: {
+      marginVertical: 10,
       width: 155,
       height: 120,
     },
@@ -224,7 +221,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
       fontFamily: font.airbold,
       fontSize: 16,
       paddingHorizontal: 10,
-      paddingTop: 3,
+     marginVertical:5,
       color: theme.darkText,
     },
 
@@ -254,8 +251,6 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
       backgroundColor: '#5B9EE1',
       height: 38,
       width: 34,
-      minHeight: 44,
-      minWidth: 44,
       borderBottomRightRadius: 20,
       borderTopLeftRadius: 20,
       justifyContent: 'center',
@@ -284,8 +279,10 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     },
 
     colorDot: {
-      width: 14,
-      height: 14,
-      borderRadius: 7,
+      width: 21,
+      height: 21,
+      borderRadius: 11,
+     borderColor: theme.mode === 'dark' ? '#223a53' : '#e6e8e9',
+     borderWidth:2
     },
   });

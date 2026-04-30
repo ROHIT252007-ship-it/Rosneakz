@@ -5,9 +5,7 @@ import { apiClient } from "../../../shared/services/apiClient";
 export const getProfile = async () => {
   try {
     const res = await apiClient.get('/auth/user-get',{
-        headers: {
-    'Content-Type': 'multipart/form-data',
-  },
+      
   timeout:15000
    } );
     return res;
@@ -54,9 +52,12 @@ export const updateUser = async (
         name: fileName,
       } as any);
     }
-    const res = await apiClient.put(`/auth/update-user`, formData, {
-      timeout: 15000,
-    });
+   const res = await apiClient.put(`/auth/update-user`, formData, {
+  timeout: 15000,
+  headers: {
+    'Content-Type': 'multipart/form-data',
+  },
+});
 
    return {
   status: res.status,

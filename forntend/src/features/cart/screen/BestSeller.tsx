@@ -132,7 +132,7 @@ const BestSeller = ({ route, navigation }: Props) => {
           style={styles.heart}
           onPress={() => handleToggleFavourite(item)}
         >
-          {isFavourite ? <HeartFill /> : <Heart />}
+          {isFavourite ? <HeartFill width={wp(4.5)} height={wp(4.5)} /> : <Heart width={wp(4.5)} height={wp(4.5)} />}
         </TouchableOpacity>
 
         <Image
@@ -150,8 +150,8 @@ const BestSeller = ({ route, navigation }: Props) => {
           {item.name}
         </Text>
 
-        <Text style={[styles.subtitle, { fontSize: wp(3.2) }]}>
-          {item.brand}
+        <Text style={[styles.subtitle, { fontSize: wp(3.2), fontWeight:'700',marginVertical:3 }]} numberOfLines={1}>
+          {item.gender ==='Men'?'Men\'s Shoes':'Women\'s Shoes'}
         </Text>
 
         <View style={styles.row}>
@@ -311,6 +311,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
+      marginTop: 7,
     },
 
     card: {
@@ -332,6 +333,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
 
     image: {
       width: '100%',
+      marginVertical:10,
     },
 
     best: {
@@ -356,6 +358,7 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
       marginTop: 2,
       fontFamily: font.airmedium,
       color: theme.darkText,
+
     },
 
     colorRow: {
@@ -364,9 +367,11 @@ const createStyles = (theme: ReturnType<typeof useAppTheme>) =>
     },
 
     colorDot: {
-      width: 14,
-      height: 14,
-      borderRadius: 7,
+      width: 21,
+      height: 21,
+      borderRadius: 11,
+      borderColor: theme.mode === 'dark' ? '#223a53' : '#e6e8e9',
+      borderWidth: 3,
     },
 
     emptyContainer: {
