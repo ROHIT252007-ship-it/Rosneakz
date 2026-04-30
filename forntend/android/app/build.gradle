@@ -79,6 +79,9 @@ android {
 
     namespace "com.forntend"
     defaultConfig {
+        ndk {
+    abiFilters "armeabi-v7a"
+}
         applicationId "com.forntend"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
