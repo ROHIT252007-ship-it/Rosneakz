@@ -8,7 +8,7 @@ const route=express.Router();
 
 route.get("/",(req,res)=>{
     res.send("hi mahajan")
-})
+});
 
 route.post("/register",createUser);
 route.post("/login",checkUser);

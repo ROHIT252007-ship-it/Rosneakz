@@ -8,6 +8,7 @@ import db from './config/db.js';
 import { addCart } from './controller/userCart.controller.js';
 import { getNotifications } from './controller/notification.controller.js';
 import path from "path";
+import { getLocations } from './controller/location.controller.js';
 
 dotenv.config();
 const app=express();
@@ -21,11 +22,24 @@ db();
 app.get("/",(req,res)=>{
     res.send("hi i am rohit");
 });
+app.use(
+  '/models',
+  express.static(path.join(process.cwd(), '3dmodels'), {
+    setHeaders: (res, filePath) => {
+      if (filePath.endsWith('.glb')) {
+        res.setHeader('Content-Type', 'model/gltf-binary');
+      }
+    },
+  })
+);
 
 app.use("/auth",auth)
 app.use("/shoes",shoes)
 app.post("/add-cart",addCart)
 app.get("/notification",getNotifications);
+app.get("/location",getLocations);
+
+
 const port=process.env.PORT;
 const ip=process.env.IP;
 
