@@ -17,13 +17,13 @@ app.use(cors())
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
+app.use(express.static(path.join(process.cwd(), "public")));
 
 db();
 app.get("/",(req,res)=>{
     res.send("hi i am rohit");
 });
-app.use(
-  '/models',
+app.use('/models',
   express.static(path.join(process.cwd(), '3dmodels'), {
     setHeaders: (res, filePath) => {
       if (filePath.endsWith('.glb')) {
@@ -38,6 +38,10 @@ app.use("/shoes",shoes)
 app.post("/add-cart",addCart)
 app.get("/notification",getNotifications);
 app.get("/location",getLocations);
+
+app.get('/map-picker', (req, res) => {
+  res.sendFile(path.join(process.cwd(), "public", "index.html"));
+});
 
 
 const port=process.env.PORT;

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Picker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    body { margin: 0; font-family: Arial; }
+    #map { height: 80vh; width: 100vw; }
+    #bottom {
+      height: 20vh;
+      padding: 12px;
+      background: white;
+    }
+    #address {
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #5B9EE1;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<div id="bottom">
+  <div id="address">Detecting location...</div>
+  <button onclick="sendToApp()">Use This Location</button>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+let selectedLat = 21.1702;
+let selectedLng = 72.8311;
+let selectedAddress = '';
+
+const map = L.map('map').setView([selectedLat, selectedLng], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19
+}).addTo(map);
+
+const marker = L.marker([selectedLat, selectedLng], {
+  draggable: true
+}).addTo(map);
+
+async function getAddress(lat, lng) {
+  const res = await fetch(
+    'https://nominatim.openstreetmap.org/reverse?format=json&lat=' +
+    lat +
+    '&lon=' +
+    lng
+  );
+  const data = await res.json();
+
+  selectedAddress = data.display_name || '';
+  document.getElementById('address').innerText = selectedAddress;
+}
+
+function setLocation(lat, lng) {
+  selectedLat = lat;
+  selectedLng = lng;
+
+  marker.setLatLng([lat, lng]);
+  map.setView([lat, lng], 16);
+
+  getAddress(lat, lng);
+}
+
+// 📍 Auto current location
+navigator.geolocation.getCurrentPosition(
+  pos => {
+    setLocation(pos.coords.latitude, pos.coords.longitude);
+  },
+  () => {
+    getAddress(selectedLat, selectedLng);
+  }
+);
+
+// 📍 Drag marker
+marker.on('dragend', function () {
+  const pos = marker.getLatLng();
+  setLocation(pos.lat, pos.lng);
+});
+
+// 📍 Tap map
+map.on('click', function (e) {
+  setLocation(e.latlng.lat, e.latlng.lng);
+});
+
+// 📤 Send to React Native
+function sendToApp() {
+  const data = {
+    latitude: selectedLat,
+    longitude: selectedLng,
+    address: selectedAddress
+  };
+
+  if (window.ReactNativeWebView) {
+    window.ReactNativeWebView.postMessage(JSON.stringify(data));
+  } else {
+    alert(JSON.stringify(data));
+  }
+}
+</script>
+
+</body>
+</html>
