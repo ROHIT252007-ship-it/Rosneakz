@@ -23,12 +23,22 @@ export const addCart = async (req, res) => {
       });
     }
 
-    if (!email || !phone || !address || !cart) {
-      return res.status(400).json({
-        message: "All fields are required",
-        error: true,
-      });
-    }
+ if (
+  !email ||
+  !phone ||
+  !address ||
+  !address.fullAddress ||
+  typeof address.latitude !== "number" ||
+  typeof address.longitude !== "number" ||
+  !cart
+) {
+  return res.status(400).json({
+    message: "All fields are required",
+    error: true,
+  });
+}
+   
+       
 
   let decoded;
 

@@ -1,21 +1,36 @@
-import mongoose, { Types } from "mongoose";
-// import { string } from "zod";
+import mongoose from "mongoose";
 
-const location=mongoose.Schema({
-    shop_name:{
-         type: String,
-    required: true,
+const locationSchema = new mongoose.Schema(
+  {
+    shop_name: {
+      type: String,
+      required: true,
+      trim: true,
     },
-    shop_area:{
-         type: String,
-    required: true,
+    shop_area: {
+      type: String,
+      required: true,
+      trim: true,
     },
-    city:{
-        type: String,
-    required: true,
-    }
-},{
-    timestamps:true
-})
+    city: {
+      type: String,
+      required: true,
+      trim: true,
+    },
 
-export const Location=mongoose.model("Location",location);
+    // 🔥 ADD THIS
+    latitude: {
+      type: Number,
+      required: true,
+    },
+    longitude: {
+      type: Number,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+export const Location = mongoose.model("Location", locationSchema);

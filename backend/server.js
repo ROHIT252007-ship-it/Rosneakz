@@ -8,7 +8,7 @@ import db from './config/db.js';
 import { addCart } from './controller/userCart.controller.js';
 import { getNotifications } from './controller/notification.controller.js';
 import path from "path";
-import { getLocations } from './controller/location.controller.js';
+import { getLocations, getShop } from './controller/location.controller.js';
 
 dotenv.config();
 const app=express();
@@ -38,7 +38,7 @@ app.use("/shoes",shoes)
 app.post("/add-cart",addCart)
 app.get("/notification",getNotifications);
 app.get("/location",getLocations);
-
+app.get("/get-shop",getShop)
 app.get('/map-picker', (req, res) => {
   res.sendFile(path.join(process.cwd(), "public", "index.html"));
 });

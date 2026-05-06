@@ -13,17 +13,24 @@
       height: 20vh;
       padding: 12px;
       background: white;
+      box-sizing: border-box;
     }
     #address {
       margin-bottom: 10px;
+      font-size: 14px;
+      color: #1A2530;
+      height: 45px;
+      overflow: hidden;
     }
     button {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       background: #5B9EE1;
       color: white;
       border: none;
       border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -44,9 +51,10 @@ let selectedLat = 21.1702;
 let selectedLng = 72.8311;
 let selectedAddress = '';
 
+
 const map = L.map('map').setView([selectedLat, selectedLng], 13);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
   maxZoom: 19
 }).addTo(map);
 
@@ -55,16 +63,23 @@ const marker = L.marker([selectedLat, selectedLng], {
 }).addTo(map);
 
 async function getAddress(lat, lng) {
-  const res = await fetch(
-    'https://nominatim.openstreetmap.org/reverse?format=json&lat=' +
-    lat +
-    '&lon=' +
-    lng
-  );
-  const data = await res.json();
+  try {
+    document.getElementById('address').innerText = 'Getting address...';
+    const res = await fetch(
+      'https://nominatim.openstreetmap.org/reverse?format=json&lat=' +
+      lat +
+      '&lon=' +
+      lng
+    );
 
-  selectedAddress = data.display_name || '';
-  document.getElementById('address').innerText = selectedAddress;
+    const data = await res.json();
+
+    selectedAddress = data.display_name || 'Address not found';
+    document.getElementById('address').innerText = selectedAddress;
+  } catch (error) {
+    selectedAddress = '';
+    document.getElementById('address').innerText = 'Address not found';
+  }
 }
 
 function setLocation(lat, lng) {
@@ -77,28 +92,40 @@ function setLocation(lat, lng) {
   getAddress(lat, lng);
 }
 
-// 📍 Auto current location
-navigator.geolocation.getCurrentPosition(
-  pos => {
-    setLocation(pos.coords.latitude, pos.coords.longitude);
-  },
-  () => {
+function detectCurrentLocation() {
+  if (!navigator.geolocation) {
+    document.getElementById('address').innerText = 'Geolocation not supported';
     getAddress(selectedLat, selectedLng);
+    return;
   }
-);
 
-// 📍 Drag marker
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      setLocation(pos.coords.latitude, pos.coords.longitude);
+    },
+    function(error) {
+      document.getElementById('address').innerText =
+        'Location permission denied or GPS off';
+
+      getAddress(selectedLat, selectedLng);
+    },
+    {
+      enableHighAccuracy: true,
+      timeout: 15000,
+      maximumAge: 0
+    }
+  );
+}
+
 marker.on('dragend', function () {
   const pos = marker.getLatLng();
   setLocation(pos.lat, pos.lng);
 });
 
-// 📍 Tap map
 map.on('click', function (e) {
   setLocation(e.latlng.lat, e.latlng.lng);
 });
 
-// 📤 Send to React Native
 function sendToApp() {
   const data = {
     latitude: selectedLat,
@@ -112,6 +139,8 @@ function sendToApp() {
     alert(JSON.stringify(data));
   }
 }
+
+detectCurrentLocation();
 </script>
 
 </body>

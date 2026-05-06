@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { string } from "zod";
 
 const { Schema } = mongoose;
 
@@ -126,6 +127,7 @@ const cartItemSchema = new Schema(
   { _id: false }
 );
 
+
 const userCartSchema = new Schema(
   {
     userid: {
@@ -149,11 +151,20 @@ const userCartSchema = new Schema(
       required: true,
       trim: true,
     },
-    address: {
-      type: String,
-      required: true,
-      trim: true,
-    },
+   address: {
+  fullAddress: {
+    type: String,
+    required: true,
+  },
+  latitude: {
+    type: Number,
+    required: true,
+  },
+  longitude: {
+    type: Number,
+    required: true,
+  },
+},
     cart: {
       type: [cartItemSchema],
       required: true,
